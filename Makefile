@@ -1719,7 +1719,7 @@ tarver:
 #	make webextra
 #
 URLOAK=http://foo2oak.rkkda.com
-URLZJS=http://foo2zjs.rkkda.com
+URLZJS=http://foo2zjs.linkevich.net/foo2zjs
 URLHP=http://foo2hp.rkkda.com
 URLXQX=http://foo2xqx.rkkda.com
 URLLAVA=http://foo2lava.rkkda.com
