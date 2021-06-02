@@ -5,7 +5,7 @@
 #
 
 #
-# PLEASE don't remove the copyright statements.  They should 
+# PLEASE don't remove the copyright statements.  They should
 # be displayed to the human that is running this.
 #
 
@@ -124,7 +124,7 @@ getexe() {
     url="$1"
     exefile="$2"
     shift; shift
-    
+
     wget $WGETOPTS -O $exefile "$url/$exefile" ||
 	error "Couldn't download $url/$exefile"
     unzip -oj $exefile "$@"
@@ -138,7 +138,7 @@ gettgz() {
     url="$1"
     file="$2"
     what="$3"
-    
+
     wget $WGETOPTS -O $file "$url/$file" ||
 	error "Couldn't download $url/$file"
     gunzip <$file | tar xvf - $what
@@ -450,7 +450,7 @@ getone() {
 		error "Couldn't download $url/$exefile"
 	mv getweb getweb.old
 	HERE=`pwd`
-	cd .. 
+	cd ..
 	tar zxf $HERE/$file
 	cd $HERE
 	echo "The tarball is extracted and the current directory is up to date."
@@ -513,7 +513,7 @@ do
 	getone 3400
 	getone 5600
 	;;
-    *)	
+    *)
 	getone $i
 	;;
     esac
