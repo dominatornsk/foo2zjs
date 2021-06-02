@@ -1,19 +1,18 @@
 UNAME := $(shell uname)
 
-PREFIX=	/usr
-PREFIX=	$(DESTDIR)/usr
-BIN=	$(PREFIX)/bin
-MANDIR=$(PREFIX)/share/man
+PREFIX?=	/usr
+BIN?=	$(DESTDIR)$(PREFIX)/bin
+MANDIR?=$(DESTDIR)$(PREFIX)/share/man
 
 SRC=	icc2ps.c xgetopt.c
 LIB=	cmscam97.c cmscnvrt.c cmserr.c cmsgamma.c cmsgmt.c cmsintrp.c cmsio1.c \
 	cmslut.c cmsmatsh.c cmsmtrx.c cmsnamed.c cmspack.c cmspcs.c cmsps2.c \
 	cmssamp.c cmswtpnt.c cmsxform.c cmsio0.c cmsvirt.c
-CFLAGS=	-O3
-INSTALL=install
+CFLAGS?=	-O3
+INSTALL?=install
 ifeq ($(UNAME),SunOS)
-    INSTALL=/usr/ucb/install
-    CC=gcc
+    INSTALL?=/usr/ucb/install
+    CC=?gcc
 endif
 
 .SUFFIXES: .1 .1in

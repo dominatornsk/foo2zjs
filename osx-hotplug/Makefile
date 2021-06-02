@@ -1,10 +1,9 @@
 LANG=C
 UNAME := $(shell uname)
-PREFIX= /usr
-PREFIX= $(DESTDIR)/usr
-BIN=    $(PREFIX)/bin
-MANDIR=$(PREFIX)/share/man
-INSTALL=install
+PREFIX?=	/usr
+BIN?=	$(DESTDIR)$(PREFIX)/bin
+MANDIR?=$(DESTDIR)$(PREFIX)/share/man
+INSTALL?=install
 RC=/etc/rc.local
 
 .SUFFIXES: .1 .1in
