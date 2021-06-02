@@ -115,6 +115,13 @@ then
 	shift
 	curl -o $*
     }
+elif [ "$SYSTEM" = FreeBSD -a "$WGET" = "" ]
+then
+    WGETOPTS=
+    wget() {
+	shift
+	fetch -p -m -o $*
+    }
 fi
 
 #
