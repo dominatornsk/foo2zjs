@@ -113,7 +113,7 @@ WEBFILES=	\
 		archhiperc.fig \
 		c3400n.png \
 		$(NULL)
-	
+
 FILES	=	\
 		README \
 		README.in \
@@ -682,7 +682,7 @@ install-test:
 	fi
 	# ... OK!
 	#
-    
+
 
 UDEVBIN=$(DESTDIR)/bin/
 
@@ -973,7 +973,7 @@ install-gui:
 	#
 	$(INSTALL) -c -m 644 hplj1020_icon.gif $(SHAREZJS)
 	$(INSTALL) -c -m 755 hplj10xx_gui.tcl $(SHAREZJS)
-	
+
 
 USBDIR=/etc/hotplug/usb
 UDEVDIR=/etc/udev/rules.d
@@ -1097,7 +1097,7 @@ install-filter:
 install-aa:
 	#
 	# openSUSE tumbleweed distro breaks ghostscript with pipes!
-	# 
+	#
 	if [ -f /etc/apparmor.d/ghostscript ]; then \
 	    aa-disable --no-reload ghostscript; \
 	fi
@@ -1461,7 +1461,7 @@ xxx.zm: FRC
 
 #
 #	PPD files
-#	
+#
 #	Don't edit the PPD files.  Instead, change the
 #	foomatic/{device,printer,opt}/*.xml files or the "modify-ppd" script.
 #
@@ -1555,7 +1555,7 @@ man-icc2ps:
 man-osx-hotplug:
 	cd osx-hotplug; $(MAKE) man
 
-.1in.1: 
+.1in.1:
 	-rm -f $*.1
 	modtime() { $(MODTIME); }; \
 	MODpage=`modtime $*.1in`; \
@@ -1695,13 +1695,13 @@ maildb:
 #
 # Create tarball
 #
-tar:	
+tar:
 	HERE=`basename $$PWD`; \
 	/bin/ls $(FILES) | \
 	sed -e "s?^?$$HERE/?" | \
 	(cd ..; tar -c -z -f $$HERE/$$HERE.tar.gz -T-)
 
-tarver:	
+tarver:
 	HERENO=`basename $$PWD`; \
 	HERE=`basename $$PWD-$(VERSION)`; \
 	ln -sf $$HERENO ../$$HERE; \
