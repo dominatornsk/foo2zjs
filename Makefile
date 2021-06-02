@@ -37,7 +37,7 @@ INSTALL?=install
 ROOT=root
 
 # Pathnames for referenced packages...
-FOODB?=$(DESTDIR)/usr/share/foomatic/db/source
+FOODB?=$(PREFIX)/share/foomatic/db/source
 
 # User ID's
 LPuid=-oroot
