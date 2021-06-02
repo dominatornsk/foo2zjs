@@ -303,7 +303,7 @@ endif
 
 # Compiler flags
 #CFLAGS +=	-O2 -Wall -Wno-unused-but-set-variable
-CFLAGS +=	-O2 -Wall 
+CFLAGS ?=	-O2 -Wall
 #CFLAGS +=	-g
 
 #
