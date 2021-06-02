@@ -17,7 +17,7 @@ SYSNAME := $(shell uname -n)
 VERSION=0.0
 
 # Installation prefix...
-PREFIX=$(DESTDIR)/usr
+PREFIX?=$(DESTDIR)/usr
 
 # Pathnames for this package...
 BIN=$(PREFIX)/bin
