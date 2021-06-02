@@ -17,27 +17,27 @@ SYSNAME := $(shell uname -n)
 VERSION=0.0
 
 # Installation prefix...
-PREFIX?=$(DESTDIR)/usr
+PREFIX?=/usr
 
 # Pathnames for this package...
-BIN?=$(PREFIX)/bin
-SHAREZJS?=$(PREFIX)/share/foo2zjs
-SHAREOAK?=$(PREFIX)/share/foo2oak
-SHAREHP?=$(PREFIX)/share/foo2hp
-SHAREXQX?=$(PREFIX)/share/foo2xqx
-SHARELAVA?=$(PREFIX)/share/foo2lava
-SHAREQPDL?=$(PREFIX)/share/foo2qpdl
-SHARESLX?=$(PREFIX)/share/foo2slx
-SHAREHC?=$(PREFIX)/share/foo2hiperc
-SHAREHBPL?=$(PREFIX)/share/foo2hbpl
-SHAREDDST?=$(PREFIX)/share/foo2ddst
-MANDIR?=$(PREFIX)/share/man
-DOCDIR?=$(PREFIX)/share/doc/foo2zjs/
+BIN?=$(DESTDIR)$(PREFIX)/bin
+SHAREZJS?=$(DESTDIR)$(PREFIX)/share/foo2zjs
+SHAREOAK?=$(DESTDIR)$(PREFIX)/share/foo2oak
+SHAREHP?=$(DESTDIR)$(PREFIX)/share/foo2hp
+SHAREXQX?=$(DESTDIR)$(PREFIX)/share/foo2xqx
+SHARELAVA?=$(DESTDIR)$(PREFIX)/share/foo2lava
+SHAREQPDL?=$(DESTDIR)$(PREFIX)/share/foo2qpdl
+SHARESLX?=$(DESTDIR)$(PREFIX)/share/foo2slx
+SHAREHC?=$(DESTDIR)$(PREFIX)/share/foo2hiperc
+SHAREHBPL?=$(DESTDIR)$(PREFIX)/share/foo2hbpl
+SHAREDDST?=$(DESTDIR)$(PREFIX)/share/foo2ddst
+MANDIR?=$(DESTDIR)$(PREFIX)/share/man
+DOCDIR?=$(DESTDIR)$(PREFIX)/share/doc/foo2zjs/
 INSTALL?=install
 ROOT=root
 
 # Pathnames for referenced packages...
-FOODB?=$(PREFIX)/share/foomatic/db/source
+FOODB?=$(DESTDIR)$(PREFIX)/share/foomatic/db/source
 
 # User ID's
 LPuid=-oroot
@@ -887,10 +887,10 @@ install-extra:
 	    fi; \
 	done
 
-MODEL=$(PREFIX)/share/cups/model
+MODEL=$(DESTDIR)$(PREFIX)/share/cups/model
 LOCALMODEL=$(DESTDIR)/usr/local/share/cups/model
 MACMODEL=/Library/Printers/PPDs/Contents/Resources
-PPD=$(PREFIX)/share/ppd
+PPD=$(DESTDIR)$(PREFIX)/share/ppd
 VARPPD=/var/lp/ppd
 install-ppd:
 	#
