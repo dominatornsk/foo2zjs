@@ -124,6 +124,14 @@ then
     }
 fi
 
+MSEXPAND=`type msexpand 2>/dev/null`
+if [ "$MSEXPAND" = "" ]
+then
+    msexpand() {
+	exec ./msexpand
+    }
+fi
+
 #
 #	Download a .EXE file from the web, unzip it, and extract the
 #	files we want
@@ -266,7 +274,7 @@ getone() {
 	    do
 		base=`basename $i .IC_`
 		mv $base.IC_ $base.ic_
-		./msexpand $base.ic_
+		msexpand $base.ic_
 		rm -f $base.ic_
 	    done
 	fi
