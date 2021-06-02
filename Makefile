@@ -20,24 +20,24 @@ VERSION=0.0
 PREFIX?=$(DESTDIR)/usr
 
 # Pathnames for this package...
-BIN=$(PREFIX)/bin
-SHAREZJS=$(PREFIX)/share/foo2zjs
-SHAREOAK=$(PREFIX)/share/foo2oak
-SHAREHP=$(PREFIX)/share/foo2hp
-SHAREXQX=$(PREFIX)/share/foo2xqx
-SHARELAVA=$(PREFIX)/share/foo2lava
-SHAREQPDL=$(PREFIX)/share/foo2qpdl
-SHARESLX=$(PREFIX)/share/foo2slx
-SHAREHC=$(PREFIX)/share/foo2hiperc
-SHAREHBPL=$(PREFIX)/share/foo2hbpl
-SHAREDDST=$(PREFIX)/share/foo2ddst
-MANDIR=$(PREFIX)/share/man
-DOCDIR=$(PREFIX)/share/doc/foo2zjs/
-INSTALL=install
+BIN?=$(PREFIX)/bin
+SHAREZJS?=$(PREFIX)/share/foo2zjs
+SHAREOAK?=$(PREFIX)/share/foo2oak
+SHAREHP?=$(PREFIX)/share/foo2hp
+SHAREXQX?=$(PREFIX)/share/foo2xqx
+SHARELAVA?=$(PREFIX)/share/foo2lava
+SHAREQPDL?=$(PREFIX)/share/foo2qpdl
+SHARESLX?=$(PREFIX)/share/foo2slx
+SHAREHC?=$(PREFIX)/share/foo2hiperc
+SHAREHBPL?=$(PREFIX)/share/foo2hbpl
+SHAREDDST?=$(PREFIX)/share/foo2ddst
+MANDIR?=$(PREFIX)/share/man
+DOCDIR?=$(PREFIX)/share/doc/foo2zjs/
+INSTALL?=install
 ROOT=root
 
 # Pathnames for referenced packages...
-FOODB=$(DESTDIR)/usr/share/foomatic/db/source
+FOODB?=$(DESTDIR)/usr/share/foomatic/db/source
 
 # User ID's
 LPuid=-oroot
